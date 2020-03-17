@@ -175,7 +175,7 @@ typedef struct snowflake
             }else
             {
                 float perp = (-1/slope);
-               float yComp = (perp * h) / sqrt(pow(perp, 2) + 1);
+                float yComp = (perp * h) / sqrt(pow(perp, 2) + 1);
                 float xComp = yComp * (1 / perp);
                 bool inverted = perp > 0;
                 
