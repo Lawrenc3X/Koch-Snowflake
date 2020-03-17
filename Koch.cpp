@@ -165,16 +165,17 @@ typedef struct snowflake
             
             new_points.push_back(p1);
             new_points.push_back(point((2 * p1.x + p2.x) / 3, (2 * p1.y + p2.y) / 3) );
+
             if (slope == -1)
             {
                 // ambiguous, what to do?
             } else if (slope == 0)
             {
                 new_points.push_back(point((p1.x + p2.x) / 2, p1.y - h) );
-            } else
+            }else
             {
                 float perp = (-1/slope);
-                float yComp = (perp * h) / sqrt(pow(perp, 2) + 1);
+               float yComp = (perp * h) / sqrt(pow(perp, 2) + 1);
                 float xComp = yComp * (1 / perp);
                 bool inverted = perp > 0;
                 
