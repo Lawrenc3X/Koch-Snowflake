@@ -1,8 +1,6 @@
 #include <ncurses.h>
 #include <math.h>
-#include <cstdlib>
 #include <vector>
-#include <array>
 
 #define CELL_CHAR "@"
 
@@ -169,7 +167,7 @@ typedef struct snowflake
             new_points.push_back(point((2 * p1.x + p2.x) / 3, (2 * p1.y + p2.y) / 3) );
             if (slope == -1)
             {
-                // what do
+                // ambiguous, what to do?
             } else if (slope == 0)
             {
                 new_points.push_back(point((p1.x + p2.x) / 2, p1.y - h) );
