@@ -1,5 +1,5 @@
 # Koch-Snowflake
-Koch Snowflake in ncurses
+Koch Snowflake in ncurses (can run much faster than the gif suggests)
 
 ![Koch Snowflake](Koch.gif)
 
