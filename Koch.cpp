@@ -3,6 +3,7 @@
 #include <vector>
 
 #define CELL_CHAR "@"
+#define STEP 10
 
 typedef struct point
 {
@@ -214,7 +215,7 @@ int main()
 
     int iterations = 0;
     point start(5, 30);
-    point p(95, 55);
+    point p(95, 30);
 
     snowflake koch(start, p);
     koch.draw();
@@ -225,7 +226,7 @@ int main()
         int c = getch();
         if (c == 119) // "W"
         {
-            p.translate(0, -1);
+            p.translate(0, -STEP);
             koch.reset(start, p);
             for (int i = 0; i < iterations; i ++)
             {
@@ -233,7 +234,7 @@ int main()
             }
         }else if (c == 97) // "A"
         {
-            p.translate(-1, 0);
+            p.translate(-STEP, 0);
             koch.reset(start, p);
             for (int i = 0; i < iterations; i ++)
             {
@@ -241,7 +242,7 @@ int main()
             }
         }else if (c == 115) // "S"
         {
-            p.translate(0, 1);
+            p.translate(0, STEP);
             koch.reset(start, p);
             for (int i = 0; i < iterations; i ++)
             {
@@ -249,7 +250,7 @@ int main()
             }
         }else if (c == 100) // "D"
         {
-            p.translate(1, 0);
+            p.translate(STEP, 0);
             koch.reset(start, p);
             for (int i = 0; i < iterations; i ++)
             {
